@@ -1,0 +1,115 @@
+/* ================================================
+   GAMEARENA – RESPONSIVE MEDIA QUERIES
+================================================ */
+
+/* ---- LARGE screens (≥1200px) ---- */
+@media (min-width: 1200px) {
+  .hero-title { font-size: 4rem; }
+}
+
+/* ---- MEDIUM screens (≤991px) ---- */
+@media (max-width: 991.98px) {
+
+  /* Navbar */
+  #mainNav .d-flex.align-items-center {
+    margin-top: 14px;
+    padding-bottom: 10px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    justify-content: flex-start;
+  }
+
+  /* Hero */
+  .hero-section { min-height: auto; padding: 110px 0 60px; }
+  .hero-title { font-size: 2.5rem; }
+  .hero-card img { max-height: 300px; margin-top: 30px; }
+
+  /* Services */
+  .service-card { height: 200px; padding: 30px 16px; }
+
+  /* Team */
+  .team-card { aspect-ratio: 2 / 3; }
+  .team-name { font-size: 0.85rem; }
+  .team-tag { width: 26px; font-size: 0.55rem; }
+}
+
+
+/* ---- TABLET (≤767px) ---- */
+@media (max-width: 767.98px) {
+
+  .hero-title { font-size: 2rem; }
+  .hero-text { font-size: 0.88rem; }
+
+  /* Games */
+  .game-img { aspect-ratio: 16/9; }
+  .controls-wrapper { padding: 0 8px; }
+  .btn-outline-game { font-size: 0.75rem; padding: 10px 20px; letter-spacing: 1px; }
+
+  /* Services */
+  .service-card { height: 180px; padding: 22px 12px; }
+  .service-card i { font-size: 26px; }
+
+  /* Ticker */
+  .ticker-row img { width: 72px; height: 72px; }
+
+  /* Stats */
+  .stat-big { font-size: 1.5rem; }
+
+  /* Contact */
+  .community-box { text-align: center; }
+  .community-box .d-flex { justify-content: center; }
+
+  /* Footer */
+  .footer-section .col-lg-3,
+  .footer-section .col-lg-2 { text-align: center; }
+  .footer-brand { justify-content: center; }
+  .footer-section .d-flex.gap-3 { justify-content: center; }
+}
+
+/* ---- MOBILE (≤575px) ---- */
+@media (max-width: 575.98px) {
+
+  .hero-title { font-size: 1.75rem; }
+  .hero-section { padding: 100px 0 50px; }
+  .hero-buttons .btn { width: 100%; margin-bottom: 8px; }
+  .hero-stats { flex-wrap: wrap; gap: 16px !important; }
+
+  /* Section subtitle */
+  .section-subtitle { font-size: 11px; letter-spacing: 2px; }
+  .section-title { font-size: 1.5rem; }
+
+  /* Games */
+  .carousel-item .row { flex-direction: column; }
+  .carousel-item .col-md-4 { width: 100% !important; }
+  .game-img { aspect-ratio: 16/9; }
+  .controls-wrapper { gap: 10px !important; }
+
+  /* Services */
+  .service-card { height: 160px; }
+  .service-card.active img { max-width: 70%; }
+
+  /* Ticker */
+  .ticker-row img { width: 60px; height: 60px; border-radius: 10px; }
+
+  /* Team */
+  .team-card { aspect-ratio: 3/4; }
+  .team-info { padding: 10px 8px; right: 24px; }
+  .team-name { font-size: 0.7rem; }
+  .team-role, .team-achieve { font-size: 0.58rem; }
+  .team-tag { width: 22px; font-size: 0.48rem; letter-spacing: 2px; }
+
+  /* Contact */
+  .stat-big { font-size: 1.3rem; }
+
+  /* Footer */
+  .footer-section { text-align: center; }
+  .newsletter-wrap { flex-direction: column; }
+  .newsletter-wrap .btn-green { width: 100%; }
+}
+
+/* ---- VERY SMALL (≤400px) ---- */
+@media (max-width: 400px) {
+  .hero-title { font-size: 1.5rem; }
+  .section-title { font-size: 1.3rem; }
+  .service-card { height: 140px; padding: 18px 10px; }
+  .team-name { font-size: 0.82rem; }
+}

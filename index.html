@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What's For Dinner</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container custom-container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <div class="logo-icon me-3">
+            <i class="fas fa-utensils"></i>
+          </div>
+          <div class="brand-text">
+            <h1>What's For Dinner</h1>
+            <p>Your daily meal inspiration</p>
+          </div>
+        </a>
+
+        <div class="d-flex align-items-center ms-auto nav-actions">
+          <a href="#" aria-label="Bookmarks"><i class="fas fa-bookmark"></i></a>
+          <a href="#" aria-label="History"
+            ><i class="fas fa-clock-rotate-left"></i
+          ></a>
+          <a href="#" aria-label="Settings"><i class="fas fa-cog"></i></a>
+          <img
+            src="./assets/images/avatar-8.png"
+            alt="User Profile"
+            class="nav-avatar"
+          />
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container custom-container pb-5">
+      <div class="recipe-card">
+        <div class="row g-0">
+          <!-- Left Column (Image & Info Box) -->
+          <div class="col-lg-5">
+            <div class="image-container">
+              <!-- Using a high-quality relevant placeholder image -->
+              <img
+                src=""
+                alt=""
+                class="recipe-img"
+                id="recipe-image"
+              />
+
+              <!-- Rating Pill -->
+              <div class="rating-badge">
+                <i class="fas fa-star star"></i>
+                <span id="recipe-rating"></span>
+                <span id="recipe-review" class="reviews"></span>
+              </div>
+
+              <!-- Info Box -->
+              <div class="info-box">
+                <div class="info-item prep">
+                  <div class="icon"><i class="far fa-clock"></i></div>
+                  <div class="label">Prep Time</div>
+                  <div class="value" id="recipe-prep-time"></div>
+                </div>
+                <div class="info-item cook">
+                  <div class="icon"><i class="fas fa-fire-burner"></i></div>
+                  <div class="label">Cook Time</div>
+                  <div class="value" id="recipe-cook-time"></div>
+                </div>
+                <div class="info-item serve">
+                  <div class="icon"><i class="fas fa-users"></i></div>
+                  <div class="label">Servings</div>
+                  <div class="value" id="recipe-servings"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column (Content) -->
+          <div class="col-lg-7">
+            <div class="content-area h-100">
+              <!-- Tags -->
+              <div class="mb-3 d-flex gap-2">
+                <span class="tag tag-easy" id="recipe-level"></span>
+                <span class="tag tag-mediterranean" id="recipe-country"></span>
+              </div>
+
+              <!-- Header & Actions -->
+              <div
+                class="d-flex justify-content-between align-items-start title-section flex-wrap gap-3"
+              >
+                <div>
+                  <h2 id="recipe-name"></h2>
+                  <p id="recipe-description">
+                  
+                  </p>
+                </div>
+                <div class="action-btns">
+                  <button class="action-btn" aria-label="Save Recipe">
+                    <i class="fas fa-bookmark"></i>
+                  </button>
+                  <button class="action-btn" aria-label="Share Recipe">
+                    <i class="fas fa-share-nodes"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Alert Box -->
+              <div class="time-alert" id="recipe-alert">
+                <div class="icon">
+                  <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div>
+                  <h6 id="recipe-alert-title">Extended Preparation Time</h6>
+                  <p id="recipe-alert-message">
+                    
+                  </p>
+                </div>
+              </div>
+
+              <!-- Tabs -->
+              <div class="custom-tabs nav" role="tablist">
+                <a
+                  href="#tab-ingredients"
+                  class="tab-item active"
+                  data-bs-toggle="tab"
+                  role="tab"
+                >
+                  <i class="fas fa-list-ul"></i> Ingredients
+                </a>
+                <a
+                  href="#tab-instructions"
+                  class="tab-item"
+                  data-bs-toggle="tab"
+                  role="tab"
+                >
+                  <i class="fas fa-book-open"></i> Instructions
+                </a>
+                <a
+                  href="#tab-nutrition"
+                  class="tab-item"
+                  data-bs-toggle="tab"
+                  role="tab"
+                >
+                  <i class="fas fa-chart-pie"></i> Nutrition
+                </a>
+                <a
+                  href="#tab-tips"
+                  class="tab-item"
+                  data-bs-toggle="tab"
+                  role="tab"
+                >
+                  <i class="fas fa-lightbulb"></i> Chef's Tips
+                </a>
+              </div>
+
+              <!-- Tab Content -->
+              <div class="tab-content">
+                <!-- Ingredients List -->
+                <div
+                  class="tab-pane fade show active"
+                  id="tab-ingredients"
+                  role="tabpanel"
+                >
+                  <div class="ingredients-box">
+                    <div class="ingredient-item">
+                      <div class="ingredient-number">1</div>
+                      <span id="recipe-ingredient-1"></span>
+                    </div>
+                    <div class="ingredient-item">
+                      <div class="ingredient-number">2</div>
+                      <span id="recipe-ingredient-2"></span>
+                    </div>
+                    <div class="ingredient-item">
+                      <div class="ingredient-number">3</div>
+                      <span id="recipe-ingredient-3"></span>
+                    </div>
+                    <div class="ingredient-item">
+                      <div class="ingredient-number">4</div>
+                      <span id="recipe-ingredient-4"></span>
+                    </div>
+                    <div class="ingredient-item">
+                      <div class="ingredient-number">5</div>
+                      <span id="recipe-ingredient-5"></span>
+                    </div>
+                    <div class="ingredient-item">
+                      <div class="ingredient-number">6</div>
+                      <span id="recipe-ingredient-6"></span>
+                    </div>
+                    <div class="ingredient-item">
+                      <div class="ingredient-number">7</div>
+                      <span id="recipe-ingredient-7"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Instructions List -->
+                <div
+                  class="tab-pane fade"
+                  id="tab-instructions"
+                  role="tabpanel"
+                >
+                  <div class="instructions-box mt-3">
+                    <div class="instruction-item">
+                      <div class="instruction-number">1</div>
+                      <span id="recipe-instruction-1"></span>
+                    </div>
+                    <div class="instruction-item">
+                      <div class="instruction-number">2</div>
+                      <span id="recipe-instruction-2"></span>
+                    </div>
+                    <div class="instruction-item">
+                      <div class="instruction-number">3</div>
+                      <span id="recipe-instruction-3"></span>
+                    </div>
+                    <div class="instruction-item">
+                      <div class="instruction-number">4</div>
+                      <span id="recipe-instruction-4"></span>
+                    </div>
+                    <div class="instruction-item">
+                      <div class="instruction-number">5</div>
+                      <span id="recipe-instruction-5"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Nutrition List -->
+                <div class="tab-pane fade" id="tab-nutrition" role="tabpanel">
+                  <div class="nutrition-box mt-3">
+                    <div class="row g-3">
+                      <div class="col-sm-6">
+                        <div class="nutrition-card">
+                          <div class="nut-icon bg-orange-light">
+                            <i class="fas fa-fire"></i>
+                          </div>
+                          <div class="nut-label">Calories</div>
+                          <div class="nut-value" id="recipe-calories"></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="nutrition-card">
+                          <div class="nut-icon bg-blue-light">
+                            <i class="fas fa-dumbbell"></i>
+                          </div>
+                          <div class="nut-label">Protein</div>
+                          <div class="nut-value" id="recipe-protein"></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="nutrition-card">
+                          <div class="nut-icon bg-yellow-light">
+                            <i class="fas fa-seedling"></i>
+                          </div>
+                          <div class="nut-label">Carbohydrates</div>
+                          <div class="nut-value" id="recipe-carbs"></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="nutrition-card">
+                          <div class="nut-icon bg-red-light">
+                            <i class="fas fa-droplet"></i>
+                          </div>
+                          <div class="nut-label">Fat</div>
+                          <div class="nut-value" id="recipe-fat"></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="nutrition-card">
+                          <div class="nut-icon bg-green-light">
+                            <i class="fas fa-leaf"></i>
+                          </div>
+                          <div class="nut-label">Fiber</div>
+                          <div class="nut-value" id="recipe-fiber"></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="nutrition-card">
+                          <div class="nut-icon bg-purple-light">
+                            <i class="fas fa-cube"></i>
+                          </div>
+                          <div class="nut-label">Sodium</div>
+                          <div class="nut-value" id="recipe-sodium"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Chef's Tips List -->
+                <div class="tab-pane fade" id="tab-tips" role="tabpanel">
+                  <div class="tips-box mt-3">
+                    <div class="tip-card">
+                      <i class="fa-solid fa-circle-check tip-icon"></i>
+                      <span class="tip-text" id="recipe-tip-1"></span>
+                    </div>
+
+                     <div class="tip-card">
+                      <i class="fa-solid fa-circle-check tip-icon"></i>
+                      <span class="tip-text" id="recipe-tip-2"></span>
+                    </div>
+
+                     <div class="tip-card">
+                      <i class="fa-solid fa-circle-check tip-icon"></i>
+                      <span class="tip-text" id="recipe-tip-3"
+                        ></span
+                      >
+                    </div>
+                    <div class="tip-card">
+                      <i class="fa-solid fa-circle-check tip-icon"></i>
+                      <span class="tip-text" id="recipe-tip-4"
+                        ></span
+                      >
+                    </div>
+                    <div class="tip-card">
+                      <i class="fa-solid fa-circle-check tip-icon"></i>
+                      <span class="tip-text" id="recipe-tip-5"
+                        ></span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                type="button"
+                id="try-btn"
+                class="btn btn-primary try-btn w-auto ms-2 mt-5 px-4 py-3"
+              >
+                <i class="fa-solid fa-arrow-left-rotate mx-2"></i> Try Another
+                Recipe
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
